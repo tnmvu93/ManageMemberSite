@@ -1,0 +1,23 @@
+{
+  "name": "manage_member_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnmvu93/ManageMemberSite.git"
+  },
+  "author": "Vu.TranNguyenMinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnmvu93/ManageMemberSite/issues"
+  },
+  "homepage": "https://github.com/tnmvu93/ManageMemberSite#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.1",
+    "gulp": "^3.9.1"
+  }
+}
