@@ -16,12 +16,16 @@ angular
 			service.SetCredential = function(username, password) {
 				var authData = username + ':' + password;
 				$rootScope.globals = {
-					username: username,
-					authData: authData
+					currentUser: {
+						username: username,
+						authData: authData
+					}
 				}
 
 				$http.defaults.headers.common['Authorization'] = 'Basic ' + authData;
-				$cookieStore.put('globals', $rootScope.globals);
+				$cookieStore.put('globals', $rootScope.globals, {
+					expires: null
+				});
 			};
 
 			service.ClearCredential = function() {

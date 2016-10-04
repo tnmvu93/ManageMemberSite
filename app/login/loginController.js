@@ -2,16 +2,19 @@
 
 angular
 	.module('app')
-	.controller('loginController', ['$scope', '$rootScope', 'loginService'
-		, function($scope, $rootScope, loginService) {
+	.controller('loginController', ['$scope', '$rootScope', '$location', 'loginService',
+		function($scope, $rootScope, $location, loginService) {
 			loginService.ClearCredential();
 
-			loginService.Login($scope.username, $scope.password, function(response) {
-				if (response.success) {
-					loginService.SetCredential($scope.username, $scope.password);
-				} else {
-					$scope.error = response.message;
-				}
-			});
+			$scope.login = function () {
+					loginService.Login($scope.username, $scope.password, function(response) {
+						if (response.success) {
+							loginService.SetCredential($scope.username, $scope.password);
+							$location.path('/');
+						} else {
+							$scope.error = response.message;
+						}
+				});
+			}
 	}]);
 

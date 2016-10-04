@@ -1,8 +1,8 @@
-<form id="loginForm">
+<form ng-submit="login()">
 	<label for="username">Username</label>
-	<input type="text" name="username" placeholder="Username">
+	<input type="text" name="username" placeholder="Username" ng-model="username">
 	<label for="password">Password</label>
-	<input type="password" name="password" placeholder="Password">
+	<input type="password" name="password" placeholder="Password" ng-model="password">
 
 	<button type="submit">Login</button>
 </form>
