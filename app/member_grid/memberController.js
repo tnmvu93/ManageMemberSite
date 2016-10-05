@@ -2,7 +2,7 @@
 
 angular
 	.module('app')
-	.controller('memberController', ['$scope',
-		function($scope) {
-
+	.controller('memberController', ['$scope', 'memberService',
+		function($scope, memberService) {
+			$scope.members = memberService.GetAll();
 		}]);

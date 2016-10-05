@@ -13,6 +13,10 @@
 				controller: 'memberController',
 				templateUrl: 'app/member_grid/member_grid.html'
 			})
+			.when('/add', {
+				controller: 'addMemberController',
+				templateUrl: 'app/member_grid/addMember.html'
+			})
 			.otherwise({
 				redirectTo: '/login'
 			});

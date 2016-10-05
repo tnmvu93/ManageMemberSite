@@ -1,1 +1,23 @@
 <h1>Member grid</h1>
+
+<a href="#/add">Add</a>
+<div>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Date of birth</th>
+			<th>Gender</th>
+			<th></th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat='member in members'>
+				<td>{{member.Name}}</td>
+				<td>{{member.Date}}</td>
+				<td>{{member.Gender}}</td>
+				<td><a href="#/edit/{{member.Id}}">Edit</a></td>
+				<td><a href="#/delete/{{member.Id}}">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
