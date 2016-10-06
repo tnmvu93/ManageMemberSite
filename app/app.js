@@ -5,18 +5,6 @@
 		.module('app', ['ngRoute', 'ngCookies'])
 		.config(['$routeProvider', function($routeProvider) {
 			$routeProvider
-			.when('/login', {
-				controller: 'loginController',
-				templateUrl: 'app/login/login.html'
-			})
-			.when('/', {
-				controller: 'memberController',
-				templateUrl: 'app/member_grid/member_grid.html'
-			})
-			.when('/add', {
-				controller: 'addMemberController',
-				templateUrl: 'app/member_grid/addMember.html'
-			})
 			.otherwise({
 				redirectTo: '/login'
 			});
@@ -33,5 +21,5 @@
 						$location.path('/login');
 					}
 				})
-			}]);
+		}]);
 })();

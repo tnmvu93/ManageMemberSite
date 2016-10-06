@@ -12,11 +12,11 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat='member in members'>
-				<td>{{member.Name}}</td>
-				<td>{{member.Date}}</td>
-				<td>{{member.Gender}}</td>
-				<td><a href="#/edit/{{member.Id}}">Edit</a></td>
-				<td><a href="#/delete/{{member.Id}}">Delete</a></td>
+				<td>{{member.name}}</td>
+				<td>{{member.date | date: 'dd-MM-yyyy'}}</td>
+				<td>{{member.gender}}</td>
+				<td><a href="#/edit/{{member.id}}">Edit</a></td>
+				<td><a href="#/delete/{{member.id}}">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>
