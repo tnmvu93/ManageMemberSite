@@ -2,7 +2,7 @@
 
 angular
 	.module('app')
-	.service('memberService', function() {
+	.service('memberService',  function() {
 		var self = this;
 		this.members = [
 			{ id: 0, name: "Nguyen Van A" , date: new Date(2016, 10, 20), gender: '1'},
@@ -24,18 +24,26 @@ angular
 		this.add = function(member) {
 			member.id = self.members.length;
 			self.members.push(member);
-		}
+		};
 
 		this.edit = function(member) {
 			if (member.id >= 0 && member.id < self.members.length) {
 				self.members[member.id] = member;
 			}
-		}
+		};
 
 		this.getMemberById = function(id) {
 			if (id >= 0 && id < self.members.length) {
 				return self.members[id];
 			}
 			return null;
-		}
-	})
+		};
+
+		this.delete = function(id) {
+			for (var i = 0; i < self.members.length; i++) {
+				if (self.members[i].id == id) {
+					self.members.splice(i, 1);
+				}
+			}
+		};
+	});

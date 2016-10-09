@@ -14,9 +14,9 @@
 			<tr ng-repeat='member in members'>
 				<td>{{member.name}}</td>
 				<td>{{member.date | date: 'dd-MM-yyyy'}}</td>
-				<td>{{member.gender}}</td>
+				<td>{{member.gender | genderFilter}}</td>
 				<td><a href="#/edit/{{member.id}}">Edit</a></td>
-				<td><a href="#/delete/{{member.id}}">Delete</a></td>
+				<td><a href="#/" ng-click=deleteMeber(member.id)>Delete</a></td>
 			</tr>
 		</tbody>
 	</table>

@@ -12,4 +12,8 @@ angular
 	.controller('memberController', ['$scope', 'memberService',
 		function($scope, memberService) {
 			$scope.members = memberService.getAll();
+
+			$scope.deleteMeber = function(id) {
+				memberService.delete(id);
+			}
 	}]);
